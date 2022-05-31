@@ -16,6 +16,16 @@ const routes: Routes = [
       elementName: 'app-component',
     } as WebComponentWrapperOptions,
   },
+  {
+    path: 'federated-web-entry-component',
+    component: WebComponentWrapper,
+    data: {
+      remoteEntry: 'http://localhost:4200/remoteEntry.js',
+      remoteName: 'remote',
+      exposedModule: './web-components',
+      elementName: 'app-entry',
+    } as WebComponentWrapperOptions,
+  },
 ];
 
 @NgModule({
